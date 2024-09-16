@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<symbol id="icon-completed" viewBox="0 0 24 24" role="img" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" color="currentColor">
+		<polyline points="4 13 9 18 20 7" />
+	</symbol>
+	<symbol id="icon-cancelled" fill="currentColor" viewBox="0 0 32 32" version="1.1">
+		<path d="M16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zM16 6c-5.522 0-10 4.478-10 10s4.478 10 10 10c5.523 0 10-4.478 10-10s-4.477-10-10-10zM20.537 19.535l-1.014 1.014c-0.186 0.186-0.488 0.186-0.675 0l-2.87-2.87-2.87 2.87c-0.187 0.186-0.488 0.186-0.675 0l-1.014-1.014c-0.186-0.186-0.186-0.488 0-0.675l2.871-2.869-2.871-2.87c-0.186-0.187-0.186-0.489 0-0.676l1.014-1.013c0.187-0.187 0.488-0.187 0.675 0l2.87 2.87 2.87-2.87c0.187-0.187 0.489-0.187 0.675 0l1.014 1.013c0.186 0.187 0.186 0.489 0 0.676l-2.871 2.87 2.871 2.869c0.186 0.187 0.186 0.49 0 0.675z">
+		</path>
+	</symbol>
+	<symbol id="icon-in-progress" viewBox="0 0 64 64" stroke-width="3" stroke="currentColor" fill="none">
+		<path d="M21.68,42.22H37.17a1.68,1.68,0,0,0,1.68-1.68L44.7,19.12A1.68,1.68,0,0,0,43,17.44H17.61a1.69,1.69,0,0,0-1.69,1.68l-5,21.42a1.68,1.68,0,0,0,1.68,1.68h2.18" />
+		<path d="M41.66,42.22H38.19l5-17.29h8.22a.85.85,0,0,1,.65.3l3.58,6.3a.81.81,0,0,1,.2.53L52.51,42.22h-3.6" />
+		<ellipse cx="18.31" cy="43.31" rx="3.71" ry="3.76" />
+		<ellipse cx="45.35" cy="43.31" rx="3.71" ry="3.76" />
+		<line x1="23.25" y1="22.36" x2="6.87" y2="22.36" stroke-linecap="round" />
+		<line x1="20.02" y1="27.6" x2="8.45" y2="27.6" stroke-linecap="round" />
+		<line x1="21.19" y1="33.5" x2="3.21" y2="33.5" stroke-linecap="round" />
+	</symbol>
+	<symbol id="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" stroke="currentColor" fill="currentColor">
+		<path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z" />
+	</symbol>
+</svg>

@@ -1,0 +1,264 @@
+@import "normalize.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', Arial, sans-serif;
+  background-color: rgb(42, 40, 61);
+  display: flex;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.app {
+  background-color: rgb(66, 63, 97);
+  padding: 45px 30px 30px;
+  display: flex;
+  gap: 30px 20px;
+  flex-wrap: wrap;
+  max-width: 940px;
+  box-shadow: 0px 0px 30px #352c4dbd;
+}
+
+.app--modal {
+  filter: blur(7px);
+  transition: filter 0.5s linear;
+}
+
+.delivery-card {
+  position: relative;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: rgb(90, 87, 128);
+  width: 280px;
+}
+
+.delivery-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: drop-shadow(0px 0px 5px);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.delivery-card--in-progress::after {
+  color: rgba(235, 240, 239, 0.568);
+  border: 1px solid rgba(235, 240, 239, 0.568);
+}
+
+.delivery-card--completed::after {
+  color: rgba(93, 212, 192, 0.568);
+  border: 1px solid rgba(93, 212, 192, 0.568);
+}
+
+.delivery-card--cancelled::after {
+  color: rgba(212, 93, 123, 0.568);
+  border: 1px solid rgba(212, 93, 123, 0.568);
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 1;
+}
+
+.text-wrapper span:first-child {
+  display: block;
+  color: rgb(172, 167, 228);
+  font-size: 13px;
+}
+
+.text-wrapper span:last-child {
+  display: block;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.btn {
+  position: absolute;
+  right: 25px;
+  bottom: 20px;
+  border: none;
+  font-family: 'Nunito', Arial, sans-serif;
+  color: rgb(172, 167, 228);
+  font-size: 13px;
+  background-color: transparent;
+  padding: 5px 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  z-index: 2;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  color: rgb(69, 65, 107);
+  background-color: rgb(228, 225, 253);
+  text-decoration: none;
+}
+
+.btn:active {
+  color: rgb(44, 41, 75);
+  background-color: rgb(210, 207, 252);
+  text-decoration: none;
+}
+
+.submit-btn {
+  color: #FFF;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: rgb(122, 119, 179);
+  text-decoration: none;
+  position: static;
+}
+
+.total-distance-btn {
+  color: #FFF;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: rgb(122, 119, 179);
+  text-decoration: none;
+  position: static;
+}
+
+.close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  top: 25px;
+  right: 30px;
+  bottom: unset;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: rgb(122, 119, 179);
+}
+
+.close-btn:active .icon,
+.close-btn:hover .icon,
+.close-btn:focus-visible .icon {
+  color: rgb(69, 65, 107);
+}
+
+.icon {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  display: block;
+  color: #FFF;
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0px 0px 4px);
+  z-index: 0;
+}
+
+.icon-in-progress {
+  color: rgb(235, 240, 239);
+}
+
+.icon-completed {
+  color: rgb(93, 212, 192);
+}
+
+.icon-cancelled {
+  color: rgb(212, 93, 123);
+}
+
+.icon-close {
+  position: static;
+  color: #FFF;
+  width: 20px;
+  height: 20px;
+  filter: none;
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  pointer-events: none;
+
+}
+
+.modal--active::after {
+  transition: background-color 0.5s linear;
+  background-color: rgba(29, 23, 46, 0.6);
+}
+
+.modal__wrapper {
+  position: relative;
+  min-width: 400px;
+  padding: 35px 30px;
+  background-color: rgb(90, 87, 128);
+}
+
+.modal__title {
+  color: #fff;
+  font-size: 25px;
+  margin: 0 0 25px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal__input {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+}
+
+.modal__select {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.total-distance-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13px;
+}
+
+.total-distance-text {
+  color: rgb(172, 167, 228);
+  margin: 0;
+}
